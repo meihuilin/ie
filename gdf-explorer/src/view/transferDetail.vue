@@ -4,9 +4,9 @@
             <div class="container-fuild ContactUs-container">
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
-                        <div class="form-group" style="position: relative;">
-                            <input type="text" class="form-control"  v-model="search_value" id="name" :placeholder="lang_list.search_msg">
-                            <img src="../assets/img/down.png" alt="" class="home-search-img"  @click="toSearch()">
+                        <div class="form-group" style="position: relative;"  @click="toSearch()">
+                            <input type="text" class="form-control" v-model="search_value" id="name" :placeholder="lang_list.search_msg">
+                            <img src="../assets/img/down.png" alt="" class="home-search-img">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-12">

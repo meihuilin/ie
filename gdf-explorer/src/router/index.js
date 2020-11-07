@@ -24,7 +24,7 @@ export default new Router({
                         title: 'Home'
                     }
                 },
-             /*   {
+     /*           {
                     path: '/software',
                     name: 'software',
                     component: resolve => require(['@/view/Software'], resolve),
@@ -53,8 +53,8 @@ export default new Router({
                             }
                         }
                     ]
-                },
-                {
+                },*/
+             /*   {
                     path: '/service',
                     name: 'service',
                     component: resolve => require(['@/view/Service'], resolve),

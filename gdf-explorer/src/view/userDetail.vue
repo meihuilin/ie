@@ -5,8 +5,8 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group" style="position: relative;">
-                            <input type="text" class="form-control" v-model="search_value"  id="name" :placeholder="lang_list.search_msg">
-                            <img src="../assets/img/down.png" alt="" @click="toSearch()" class="home-search-img">
+                            <input type="text" class="form-control" v-model="search_value" id="name" :placeholder="lang_list.search_msg">
+                            <img src="../assets/img/down.png" alt="" class="home-search-img" @click="toSearch()">
                         </div>
                     </div>
                 </div>
@@ -98,11 +98,11 @@
                 pageNumber: 1,
                 total: 0,
                 stockName:'',
+                search_value:'',
                 lang_list:{
                 },
-                list:[],
                 fromAddress:'',
-                search_value:'',
+                list:[],
             };
         },
         mounted() {

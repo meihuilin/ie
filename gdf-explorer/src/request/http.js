@@ -3,8 +3,8 @@ import store from '../store/index'
 
 // 环境的切换
 
-// axios.defaults.baseURL = 'https://api.texchange.co/';
-axios.defaults.baseURL = 'http://192.168.0.4:8082/';
+axios.defaults.baseURL = 'http://gdfapi.btca.plus/';
+// axios.defaults.baseURL = 'http://192.168.0.4:8082/';
 // 请求超时时间
 axios.defaults.timeout = 10000;
 axios.defaults.headers['language'] = 'cn';
