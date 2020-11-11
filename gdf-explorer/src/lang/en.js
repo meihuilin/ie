@@ -33,4 +33,6 @@ export default{
     'circulation_msg':'total circulation',
     'total_msg':'total',
     'Circulation_msg':'rate',
+    'excavation_total':'excavation total',
+    'excavated_total':'excavated total',
 }

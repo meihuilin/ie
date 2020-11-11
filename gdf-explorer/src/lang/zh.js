@@ -33,4 +33,6 @@ export default{
     'circulation_msg':'流通总量',
     'total_msg':'总量',
     'Circulation_msg':'流通率',
+    'excavation_total':'挖出总量',
+    'excavated_total':'待挖总量',
 }

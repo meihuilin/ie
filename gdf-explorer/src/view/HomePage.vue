@@ -14,33 +14,33 @@
                     </div>
                 </div>
                 <div class="row" style="margin:0 0 20px;">
-                    <div class="col-xs-6 col-sm-4 col-md-4 index-tab-4">
+                    <div class="col-xs-6 col-sm-3 col-md-3 index-tab-4">
                         <div style="padding: 15px 0;border-right: 1px solid hsla(0,0%,84.7%,.15);">
-                            <div class="index-tab-top">{{ info.publishNum||'0' }}</div>
+                            <div class="index-tab-top">{{ info.publishAll||'0' }}</div>
                             <div class="index-tab-bottom">{{ lang_list.total_issue_msg }}</div>
                         </div>
                     </div>
-                   <!-- <div class="col-xs-6 col-sm-3 col-md-3 index-tab-4">
+                    <div class="col-xs-6 col-sm-3 col-md-3 index-tab-4">
                         <div style="padding: 15px 0;border-right: 1px solid hsla(0,0%,84.7%,.15);">
-                            <div class="index-tab-top" style="color: #f6334e;">{{ info.currencyNum||'0' }}</div>
+                            <div class="index-tab-top" style="color: #f6334e;">{{ info.publishCirculate||'0' }}</div>
                             <div class="index-tab-bottom">{{ lang_list.circulation_msg }}</div>
                         </div>
-                    </div>-->
-                    <div class="col-xs-6 col-sm-4 col-md-4 index-tab-4">
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3 index-tab-4">
                         <div style="padding: 15px 0;border-right: 1px solid hsla(0,0%,84.7%,.15);">
-                            <div class="index-tab-top" style="color: #a444ff;"> {{ info.totalLvNum||'0' }}</div>
-                            <div class="index-tab-bottom">{{ lang_list.stockName }} {{ lang_list.total_msg }}</div>
+                            <div class="index-tab-top" style="color: #a444ff;"> {{ info.oreCirculate||'0' }}</div>
+                            <div class="index-tab-bottom">{{ lang_list.excavation_total }}</div>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-4 index-tab-4">
+                    <div class="col-xs-6 col-sm-3 col-md-3 index-tab-4">
                         <div style="padding: 15px 0;">
-                            <div class="index-tab-top" style="color: #00b7ff;">{{ info.totalUser||'0' }}</div>
-                            <div class="index-tab-bottom">{{ lang_list.account_msg }}</div>
+                            <div class="index-tab-top" style="color: #00b7ff;">{{ info.oreRemain||'0' }}</div>
+                            <div class="index-tab-bottom">{{ lang_list.excavated_total }}</div>
                         </div>
                     </div>
                 </div>
                 <div class="row" style="margin:0 0 20px;">
-                    <div class="col-xs-12 col-sm-6 col-md-6 index-tab-4">
+                    <div class="col-xs-12 col-sm-4 col-md-4 index-tab-4">
                         <div style="padding: 5px 30px;border-right: 1px solid rgba(216, 216, 216, 0.15);text-align: left;">
                             <div style="font-size: 18px;">
                                 {{ lang_list.price_msg }} $ / {{ lang_list.wave_msg }} %
@@ -68,34 +68,34 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 index-tab-4">
+                    <div class="col-xs-12 col-sm-4 col-md-4 index-tab-4">
                         <div style="padding:0 0;position: relative;">
                             <div class="total-class" id="myChart1" style="width: 100%;height: 192px">
 
                             </div>
                             <div style="font-size: 18px;position: absolute;top:5%; left: 20%; width: 60%;text-align: center;">
                                 <div>{{ lang_list.total_issue_msg }}</div>
-                                <div style="color: #00b7ff;font-size: 24px;margin-top:3%;">{{ info.publishNum||'0' }}</div>
+                                <div style="color: #00b7ff;font-size: 24px;margin-top:3%;">{{ info.publishAll||'0' }}</div>
                             </div>
                             <div style="position: absolute;bottom:27%;width: 40%;left: 30%;opacity: 0.6;">
-                                {{ lang_list.stockName }} {{ lang_list.total_msg }}
+                                 {{ lang_list.circulation_msg }}
                             </div>
                         </div>
                     </div>
-                  <!--  <div class="col-xs-6 col-sm-4 col-md-4 index-tab-4">
+                    <div class="col-xs-6 col-sm-4 col-md-4 index-tab-4">
                         <div style="padding: 0 0;position: relative;">
                             <div class="total-class" id="myChart2" style="width: 100%;height: 192px">
 
                             </div>
                             <div style="font-size: 18px;position: absolute;top:5%; left: 20%; width: 60%;text-align: center;">
-                                <div> {{ lang_list.circulation_msg }}</div>
-                                <div style="color: #00b7ff;font-size: 24px;margin-top:3%;">{{ info.currencyNum||'0' }}</div>
+                                <div> {{ lang_list.excavation_total }}</div>
+                                <div style="color: #00b7ff;font-size: 24px;margin-top:3%;">{{ info.oreCirculate||'0' }}</div>
                             </div>
                             <div style="position: absolute;bottom:27%;width: 40%;left: 30%;opacity: 0.6;">
-                                {{ lang_list.stockName }} {{ lang_list.total_msg }}
+                                {{ lang_list.excavated_total }}
                             </div>
                         </div>
-                    </div>-->
+                    </div>
                 </div>
                 <div class="row" style="margin:0 0 20px;">
                     <div class="col-xs-12 col-sm-12 col-md-12" style="padding:0;">
@@ -161,7 +161,11 @@
                     totalLvNum:0,
                     currencyNum:0,
                     totalUser:0,
-                    publishNum:0
+                    publishNum:0,
+                    publishAll:0,
+                    publishCirculate:0,
+                    oreCirculate:0,
+                    oreRemain:0,
                 },
                 vo:{},
             };
@@ -197,16 +201,11 @@
             getline() {
                 var echarts = require('echarts');
                 let myChart1 = echarts.init(document.getElementById('myChart1'));
-                // let myChart2 = echarts.init(document.getElementById('myChart2'));
-                var data = Math.floor(this.info.totalLvNum/this.info.publishNum*100); //数值大小
+                let myChart2 = echarts.init(document.getElementById('myChart2'));
+                var data = Math.floor(this.info.publishCirculate/this.info.publishAll*100); //数值大小
                 var max = 100; //满刻度大小
-                // var data1=0;
-                // if(this.info.totalLvNum>this.info.currencyNum){
-                //     data1=0;
-                // }else{
-                //     data1 = Math.floor(this.info.totalLvNum/this.info.currencyNum*100); //数值大小
-                // }
-                // var max1 = 100; //满刻度大小
+                var data1= Math.floor(this.info.oreRemain/this.info.oreCirculate*100); //数值大小
+                var max1 = 100; //满刻度大小
                 myChart1.setOption(
                     {
                         backgroundColor: '#000',
@@ -276,75 +275,75 @@
                         }]
                     }
                 )
-                // myChart2.setOption(
-                //     {
-                //         backgroundColor: '#000',
-                //         title: {
-                //             text: data1 + '%',
-                //             x: 'center',
-                //             y: '75%',
-                //             textStyle: {
-                //                 color: '#00B7FF',
-                //                 fontSize: '30'
-                //             },
-                //             subtextStyle: {
-                //                 color: '#999',
-                //                 fontSize: 16
-                //             }
-                //         },
-                //         color: ["#fff", 'rgba(255,255,255,.4)', 'transparent'],
-                //         series: [{
-                //             type: "pie",
-                //             startAngle: 190,
-                //             center: ["50%", "85%"],
-                //             radius: ["65%", "80%"],
-                //             hoverAnimation: false,
-                //             labelLine: {
-                //                 show: false
-                //             },
-                //             data: [{
-                //                 name: "",
-                //                 value: data1,
-                //                 itemStyle: {
-                //                     normal: {
-                //                         show: true,
-                //                         color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
-                //                             offset: 0,
-                //                             color: '#00B7FF'
-                //
-                //                         }, {
-                //                             offset: 0.5,
-                //                             color: '#00B7FF'
-                //
-                //                         }, {
-                //                             offset: 1,
-                //                             color: '#4C4F65'
-                //
-                //                         }])
-                //                     },
-                //                 },
-                //             },
-                //                 { //画中间的图标
-                //                     name: "",
-                //                     value: 0,
-                //                     label: {
-                //                         position: 'inside',
-                //                         width: 50,
-                //                         height: 50,
-                //                         padding: 50
-                //                     }
-                //                 }, { //画剩余的刻度圆环
-                //                     name: "",
-                //                     value: max1 - data1,
-                //
-                //                 }, { //画剩余的刻度圆环
-                //                     name: "",
-                //                     value: 80,
-                //                 }
-                //             ]
-                //         }]
-                //     }
-                // )
+                myChart2.setOption(
+                    {
+                        backgroundColor: '#000',
+                        title: {
+                            text: data1 + '%',
+                            x: 'center',
+                            y: '75%',
+                            textStyle: {
+                                color: '#00B7FF',
+                                fontSize: '30'
+                            },
+                            subtextStyle: {
+                                color: '#999',
+                                fontSize: 16
+                            }
+                        },
+                        color: ["#fff", 'rgba(255,255,255,.4)', 'transparent'],
+                        series: [{
+                            type: "pie",
+                            startAngle: 190,
+                            center: ["50%", "85%"],
+                            radius: ["65%", "80%"],
+                            hoverAnimation: false,
+                            labelLine: {
+                                show: false
+                            },
+                            data: [{
+                                name: "",
+                                value: data1,
+                                itemStyle: {
+                                    normal: {
+                                        show: true,
+                                        color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [{
+                                            offset: 0,
+                                            color: '#00B7FF'
+
+                                        }, {
+                                            offset: 0.5,
+                                            color: '#00B7FF'
+
+                                        }, {
+                                            offset: 1,
+                                            color: '#4C4F65'
+
+                                        }])
+                                    },
+                                },
+                            },
+                                { //画中间的图标
+                                    name: "",
+                                    value: 0,
+                                    label: {
+                                        position: 'inside',
+                                        width: 50,
+                                        height: 50,
+                                        padding: 50
+                                    }
+                                }, { //画剩余的刻度圆环
+                                    name: "",
+                                    value: max1 - data1,
+
+                                }, { //画剩余的刻度圆环
+                                    name: "",
+                                    value: 80,
+                                }
+                            ]
+                        }]
+                    }
+                )
             },
             getXian() {
                 var echarts = require('echarts');
