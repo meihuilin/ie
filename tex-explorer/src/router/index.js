@@ -78,6 +78,14 @@ export default new Router({
                         title: 'userDetail'
                     }
                 },
+                {
+                    path: '/errorPage',
+                    name: 'errorPage',
+                    component: resolve => require(['@/view/errorPage'], resolve),
+                    meta: {
+                        title: 'errorPage'
+                    }
+                },
                /* {
                     path: '/newsinformation',
                     name: 'newsinformation',

@@ -32,7 +32,7 @@
                             <div class="index-tab-bottom">{{ lang_list.stockName }} {{ lang_list.total_msg }}</div>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-4 index-tab-4">
+                    <div class="col-xs-12 col-sm-4 col-md-4 index-tab-4">
                         <div style="padding: 15px 0;">
                             <div class="index-tab-top" style="color: #00b7ff;">{{ info.totalUser||'0' }}</div>
                             <div class="index-tab-bottom">{{ lang_list.account_msg }}</div>
@@ -144,7 +144,6 @@
         </div>
     </div>
 </template>
-
 <script>
     import { apiIndexInfo,apiTransaction } from '@/request/api';
     export default {
@@ -167,9 +166,23 @@
             };
         },
         mounted() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
+                //跳转移动端页面
+                this.$router.push({
+                    path: '/errorPage',
+                    query: {
+                    }
+                })
+                return false;
+            }
+            $('#footer').show();
+            $('#GoTop').show();
+            $('#header').show();
             this.lang_list = this.en;
             this.getDate();
             this.browserListUserCharges(this.pageNumber)
+
         },
         methods: {
             toSearch(){
