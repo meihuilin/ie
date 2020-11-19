@@ -82,7 +82,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-4 col-md-4 index-tab-4">
+                    <div class="col-xs-12 col-sm-4 col-md-4 index-tab-4">
                         <div style="padding: 0 0;position: relative;">
                             <div class="total-class" id="myChart2" style="width: 100%;height: 192px">
 
@@ -105,9 +105,8 @@
                     </div>
                 </div>
                 <div class="row" style="margin:0 0 20px;background: #000;padding: 10px 15px;">
-                    <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="col-xs-12 col-sm-12 col-md-12" style="padding: 0;">
                         <div style="padding: 10px 0;">{{ lang_list.transfer_msg }}</div>
-                        <div id="pages"></div>
                         <div id="pcQkList" class="pcTableCls">
                             <div class="table-responsive" style="text-align: center;">
                                 <table class="table">
@@ -138,6 +137,7 @@
                                 </table>
                             </div>
                         </div>
+                        <div id="pages"></div>
                     </div>
                 </div>
             </div>
@@ -477,7 +477,8 @@
                     // 获取数据成功后的其他操作
 
                     _this.list = res.data.transaction.list;
-                    _this.total = res.data.transaction.total;
+                    // _this.total = res.data.transaction.total;
+                    _this.total = 100;
                     _this.pageList()
                 })
             },
@@ -486,15 +487,15 @@
                 new Pagination({
                     element: '#pages',  // 渲染的容器  [必填]
                     type: 1,  // 样式类型，默认1 ，目前可选 [1,2] 可自行增加样式   [非必填]
-                    layout: 'total,pageSize, home, prev, pager, next, last, jumper',  // [必填]
+                    layout: 'total,pageSize, prev, pager, next',  // [必填]
                     pageIndex: _this.pageNumber, // 当前页码 [非必填]
                     pageSize: 15, // 每页显示条数   TODO: 如果使用了sizes这里就无须传参，传了也无效 [必填]
-                    pageCount: 7, // 页码显示数量，页码必须大于等于5的奇数，默认页码9  TODO:为了样式美观，参数只能为奇数， 否则会报错 [非必填]
-                    total: _this.total, // 数据总条数 [必填]
+                    pageCount: 5, // 页码显示数量，页码必须大于等于5的奇数，默认页码9  TODO:为了样式美观，参数只能为奇数， 否则会报错 [非必填]
+                    total:  _this.total, // 数据总条数 [必填]
                     singlePageHide: false,  // 单页隐藏， 默认true  如果为true页码少于一页则不会渲染 [非必填]
                     pageSizes: [9, 15, 25, 35], // 选择每页条数  TODO: layout的sizes属性存在才生效
-                    prevText: 'previous', // 上一页文字，不传默认为箭头图标  [非必填]
-                    nextText: 'next', // 下一页文字，不传默认为箭头图标 [非必填]
+                    // prevText: 'previous', // 上一页文字，不传默认为箭头图标  [非必填]
+                    // nextText: 'next', // 下一页文字，不传默认为箭头图标 [非必填]
                     ellipsis: true, // 页码显示省略符 默认false  [非必填]
                     disabled: true, // 显示禁用手势 默认false  [非必填]
                     currentChange: function (index, pageSize) {  // 页码改变时回调  TODO:第一个参数是当前页码，第二个参数是每页显示条数数量，需使用sizes第二参数才有值。
@@ -579,6 +580,8 @@
         color: #fc7204;
         font-size: 30px;
         margin-bottom: 10px;
+        overflow: auto;
+        padding: 0 5px;
     }
 
     #myChart3 canvas {

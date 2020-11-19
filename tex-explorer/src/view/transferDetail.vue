@@ -153,16 +153,16 @@
             };
         },
         mounted() {
-            var sUserAgent = navigator.userAgent.toLowerCase();
-            if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
-                //跳转移动端页面
-                this.$router.push({
-                    path: '/errorPage',
-                    query: {
-                    }
-                })
-                return false;
-            }
+            // var sUserAgent = navigator.userAgent.toLowerCase();
+            // if (/ipad|iphone|midp|rv:1.2.3.4|ucweb|android|windows ce|windows mobile/.test(sUserAgent)) {
+            //     //跳转移动端页面
+            //     this.$router.push({
+            //         path: '/errorPage',
+            //         query: {
+            //         }
+            //     })
+            //     return false;
+            // }
             this.lang_list = this.en;
             this.tranId = this.$route.query.tranId
             this.getDate();

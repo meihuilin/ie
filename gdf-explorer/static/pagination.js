@@ -346,7 +346,8 @@ var Pagination = /** @class */ (function () {
     // 总页数
     Pagination.prototype.total = function () {
         var element = this.createElement('div', '_count');
-        element.innerText = "common " + this.options.total + " strip";
+        // element.innerText = "common " + this.options.total + " strip";
+        element.innerText ='';
         return element;
     };
     // 页码变化
