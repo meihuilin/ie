@@ -477,8 +477,8 @@
                     // 获取数据成功后的其他操作
 
                     _this.list = res.data.transaction.list;
-                    // _this.total = res.data.transaction.total;
-                    _this.total = 100;
+                    _this.total = res.data.transaction.total;
+                    // _this.total = 100;
                     _this.pageList()
                 })
             },
